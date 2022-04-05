@@ -1,0 +1,57 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+// VARIABLES
+$input-main-color: $dusty-gray;
+$input-placeholder-color: $gray;
+$input-el-border-color: $silver;
+$input-bg-color: $dark-gray;
+
+$translateY: -20px;
+
+.a-textInput {
+  position: relative;
+
+  &__element {
+    display: inline-block;
+    width: 100%;
+    background: $input-bg-color;
+    padding: $md;
+    padding-top: $xl;
+
+    color: $input-main-color;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    transition: all 0.4s;
+    border-radius: 35px;
+    outline: $input-bg-color;
+    transform: none;
+
+    &:focus {
+      border-color: $input-main-color;
+    }
+
+    &.-animate:focus {
+      border-color: transparent;
+    }
+
+    &:placeholder-shown + .a-textInput__placeholder {
+      transform: none;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 22px;
+    left: $md;
+
+    color: $input-placeholder-color;
+
+    transition: all 0.3s;
+    pointer-events: none;
+    user-select: none;
+    transform-origin: 0 0;
+    transform: scale(0.7) translateY($translateY);
+  }
+}

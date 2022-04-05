@@ -1,0 +1,34 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+$card-bg-color: $dark-gray;
+$card-font-color-dusty: $dusty-gray;
+.card-item {
+  margin: 20px 0 20px 0;
+  background: $card-bg-color !important;
+  border-radius: 40px;
+  .card-img-top {
+    border-radius: 40px;
+    height: 280px;
+    padding: 0 0px 0 17px;
+  }
+  .card-content {
+    .card-infor {
+      .title {
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        margin: auto;
+      }
+      .author-infor {
+        .user-name {
+          padding-left: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: $card-font-color-dusty;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+// VARIABLES
+$submit-button-color: $white;
+$submit-button-back-color: $light-red;
+$translateY: 3px;
+
+.a-submitButton {
+  height: 50px;
+
+  font-family: "Montserrat" sans-serif;
+  font-size: $fs-14;
+
+  cursor: pointer;
+
+  border-radius: 12px;
+  text-transform: uppercase;
+  transition: transform 0.5s;
+  outline: none;
+
+  &:active,
+  &:focus {
+    transform: translateY($translateY);
+  }
+  &.light {
+    background: #fff;
+    color: black;
+  }
+  &.warning {
+    background: $submit-button-back-color;
+    color: $submit-button-color;
+  }
+  &.small {
+    width: 107px;
+  }
+  &.normal {
+    width: 180px;
+  }
+  &.full-width {
+    width: 100%;
+  }
+  >img.icon {
+    width: 15px;
+    margin-right: 3px;
+    display: inline-flex;
+    // position: absolute;
+  }
+}

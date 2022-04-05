@@ -1,0 +1,34 @@
+@import "../../helpers/variables/initialize";
+@import "../../helpers/mixins/initialize";
+
+$back-color: $light-gray;
+$font-color: $dusty-gray;
+.layout-default {
+  color: $font-color;
+  background: $back-color;
+  margin-right: auto;
+  margin-left: auto;
+  .layout-side{
+    padding: 0px !important;
+  }
+  .content {
+    &__nav {
+      padding-top: 33px;
+      padding-bottom: 39px;
+    }
+
+    &__user {
+      float: right;
+    }
+
+    &__main {
+      padding-bottom: 2em;
+    }
+
+    &__footer {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border-top: 1px solid #c0c0c0;
+    }
+  }
+}
